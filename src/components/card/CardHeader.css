@@ -1,0 +1,13 @@
+.companyName {
+    font-weight: bold;
+}
+.makeLightGrey {
+    color: #999;
+}
+.makeBlue {
+    color: #0645AD;
+}
+p {
+    letter-spacing: .5px;
+    line-height: .65;
+}
