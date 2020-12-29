@@ -10,7 +10,8 @@ class App extends React.Component {
         randomDate: null,
         product: null,
         firstName: null,
-        lastName: null
+        lastName: null,
+        avatar: null
     }
 
     componentDidMount() {
@@ -19,12 +20,14 @@ class App extends React.Component {
         let product = faker.commerce.productName();
         let firstName = faker.name.firstName();
         let lastName = faker.name.lastName();
+        let avatar = faker.image.abstract();
         this.setState({
             companyName,
             randomDate,
             product,
             firstName,
-            lastName
+            lastName,
+            avatar
         });
     }
 
@@ -37,6 +40,7 @@ class App extends React.Component {
                     product={this.state.product}
                     firstName={this.state.firstName}
                     lastName={this.state.lastName}
+                    avatar={this.state.avatar}
                 />
             </CardHolder>
         )
