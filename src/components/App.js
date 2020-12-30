@@ -2,32 +2,42 @@ import React from 'react';
 import faker from 'faker';
 import CardHolder from './card/CardHolder';
 import CardHeader from './card/CardHeader';
+import CardMainContent from './card/CardMainContent';
 
 class App extends React.Component {
 
     state = {
+        avatar: null,
+        color: null,
         companyName : null,
-        randomDate: null,
-        product: null,
         firstName: null,
         lastName: null,
-        avatar: null
+        personalPic: null,
+        product: null,
+        productDesc: null,
+        randomDate: null
     }
 
     componentDidMount() {
+        let avatar = faker.image.abstract();
+        let color = faker.commerce.color();
         let companyName = faker.company.companyName();
-        let randomDate = faker.date.month();
-        let product = faker.commerce.productName();
         let firstName = faker.name.firstName();
         let lastName = faker.name.lastName();
-        let avatar = faker.image.abstract();
+        let personalPic = faker.image.business();
+        let product = faker.commerce.productName();
+        let productDesc = faker.commerce.productDescription();
+        let randomDate = faker.date.month();
         this.setState({
+            avatar,
+            color,
             companyName,
-            randomDate,
-            product,
             firstName,
             lastName,
-            avatar
+            personalPic,
+            product,
+            productDesc,
+            randomDate
         });
     }
 
@@ -35,12 +45,21 @@ class App extends React.Component {
         return (
             <CardHolder>
                 <CardHeader
+                    avatar={this.state.avatar}
                     companyName={this.state.companyName}
-                    randomDate={this.state.randomDate}
-                    product={this.state.product}
                     firstName={this.state.firstName}
                     lastName={this.state.lastName}
+                    product={this.state.product}
+                    randomDate={this.state.randomDate}
+                />
+                <CardMainContent
                     avatar={this.state.avatar}
+                    color={this.state.color}
+                    firstName={this.state.firstName}
+                    lastName={this.state.lastName}
+                    personalPic={this.state.personalPic}
+                    product={this.state.product}
+                    productDescription={this.state.productDescription}
                 />
             </CardHolder>
         )
