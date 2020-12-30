@@ -34,17 +34,17 @@ export const generateList = () => {
     const randomLengthArr = new Array(faker.random.number({min: 1, max: 25})).fill();
     const data = randomLengthArr.map((x, index)=> {
         let randomNum = faker.random.number({min:1, max: 75});
-        let avatarSRC = require(`../../images/a${randomNum}.jpg`);
-        let personalSRC = require(`../../images/abs${randomNum}.jpg`);
+        let avatarSRC = require(`../../images/abs${randomNum}.jpg`);
+        let personalSRC = require(`../../images/a${randomNum}.jpg`);
         debugger;
        return ({
-            avatar: personalSRC.default,
+            avatar: avatarSRC.default,
             color: faker.commerce.color(),
             companyName: faker.company.companyName(),
             firstName: faker.name.firstName(),
             key: index,
             lastName: faker.name.lastName(),
-            personalPic: avatarSRC.default,
+            personalPic: personalSRC.default,
             product: faker.commerce.productName(),
             productDesc: faker.company.catchPhrase(),
             randomDate: faker.date.month(),
