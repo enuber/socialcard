@@ -20,7 +20,7 @@ class App extends React.Component {
     renderCards = () => {
         const cards = this.state.socialCardArr.map(card =>
             (
-                <CardHolder>
+                <CardHolder key={card.key}>
                     <CardHeader
                         avatar={card.avatar}
                         companyName={card.companyName}
