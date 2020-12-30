@@ -60,7 +60,6 @@ const MainContentTopArea = props => {
             )
         }
     }
-console.log(props)
     return (
         <div>
             {showTopContent()}
