@@ -8,7 +8,7 @@ const MainContentDescriptionArea = props => {
             return null;
         } else {
             return (
-                <div>
+                <div className="descContainer">
                     <h2>{props.product}</h2>
                     <p>{props.productDesc}</p>
                     <p className="makeLightGrey">{props.webAddress}</p>
@@ -16,7 +16,7 @@ const MainContentDescriptionArea = props => {
             )
         }
     }
-console.log(props)
+
     return (
         <div>
             {showDesc()}
