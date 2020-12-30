@@ -17,6 +17,7 @@ const CardMainContent = props => {
             <MainContentDescriptionArea
                 product={props.product}
                 productDesc={props.productDesc}
+                webAddress={props.webAddress}
             />
         </div>
     )
