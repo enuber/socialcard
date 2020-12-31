@@ -49,6 +49,7 @@ class App extends React.Component {
         return (
             <div>
                 <h2>Social Cards - React Using Component State and Props</h2>
+                <hr />
                 {this.renderCards()}
             </div>
         )
